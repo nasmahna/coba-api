@@ -1,0 +1,25 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS-Todos,,,,12-06-2024 18:46:16,12-06-2024 18:46:27,10.933s,PASSED
+,,,,,,,
+Test Cases/REST API/Todos/TC GET Todos,,,,12-06-2024 18:46:16,12-06-2024 18:46:22,5.800s,PASSED
+"sendRequest(findTestObject(""REST API/Todos/GET Todos""))",,,,12-06-2024 18:46:17,12-06-2024 18:46:19,2.563s,PASSED
+"data = findTestData(""Data Files/REST API/Data Todos-API"")",,,,12-06-2024 18:46:19,12-06-2024 18:46:20,0.853s,PASSED
+"maxRows = Math.min(10, data.getRowNumbers())",,,,12-06-2024 18:46:20,12-06-2024 18:46:20,0.059s,PASSED
+"for ([loopFile = 1, loopFile <= maxRows, (loopFile++)])",,,,12-06-2024 18:46:20,12-06-2024 18:46:22,1.518s,PASSED
+,,,,,,,
+Test Cases/REST API/Todos/TC POST Todos,,,,12-06-2024 18:46:22,12-06-2024 18:46:26,4.142s,PASSED
+"testData = findTestData(""Data Files/REST API/Data Todos-API"")",,,,12-06-2024 18:46:22,12-06-2024 18:46:22,0.059s,PASSED
+"maxRows = Math.min(10, testData.getRowNumbers())",,,,12-06-2024 18:46:22,12-06-2024 18:46:22,0.004s,PASSED
+"for ([rowNum = 1, rowNum <= maxRows, (rowNum++)])",,,,12-06-2024 18:46:22,12-06-2024 18:46:26,3.851s,PASSED
+,,,,,,,
+Test Cases/REST API/Todos/TC DELETE Todos,,,,12-06-2024 18:46:26,12-06-2024 18:46:27,0.713s,PASSED
+"getTodosResponse = sendRequest(findTestObject(""REST API/Todos/GET Todos""))",,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.058s,PASSED
+"verifyResponseStatusCode(getTodosResponse, 200)",,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.004s,PASSED
+getTodosJsonResponse = JsonSlurper().parseText(getTodosResponse.getResponseText()),,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.009s,PASSED
+todoId = id,,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.010s,PASSED
+"logInfo(""Fetched Todo ID: "" + todoId)",,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.004s,PASSED
+"deleteTodoRequest = findTestObject(""REST API/Todos/DELETE Todos"")",,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.010s,PASSED
+"deleteTodoRequest.setRestUrl(""https://jsonplaceholder.typicode.com/todos/"" + todoId)",,,,12-06-2024 18:46:26,12-06-2024 18:46:26,0.034s,PASSED
+deleteResponse = sendRequest(deleteTodoRequest),,,,12-06-2024 18:46:26,12-06-2024 18:46:27,0.396s,PASSED
+"verifyResponseStatusCode(deleteResponse, 200)",,,,12-06-2024 18:46:27,12-06-2024 18:46:27,0.005s,PASSED
+"logInfo(""Response Body: "" + deleteResponse.getResponseText())",,,,12-06-2024 18:46:27,12-06-2024 18:46:27,0.005s,PASSED

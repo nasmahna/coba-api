@@ -1,0 +1,28 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS-Posts,,,,12-06-2024 14:16:07,12-06-2024 14:16:15,8.001s,PASSED
+,,,,,,,
+Test Cases/REST API/Posts/GET Posts,,,,12-06-2024 14:16:08,12-06-2024 14:16:13,5.775s,PASSED
+"sendRequest(findTestObject(""Object Repository/REST API/Posts/GET Posts""))",,,,12-06-2024 14:16:09,12-06-2024 14:16:11,2.285s,PASSED
+"data = findTestData(""Data Files/REST API/Data Posts API"")",,,,12-06-2024 14:16:11,12-06-2024 14:16:12,0.734s,PASSED
+"maxRows = Math.min(10, data.getRowNumbers())",,,,12-06-2024 14:16:12,12-06-2024 14:16:12,0.067s,PASSED
+"for ([loopFile = 1, loopFile <= maxRows, (loopFile++)])",,,,12-06-2024 14:16:12,12-06-2024 14:16:13,1.768s,PASSED
+,,,,,,,
+Test Cases/REST API/Posts/POST Posts,,,,12-06-2024 14:16:13,12-06-2024 14:16:15,1.127s,PASSED
+"response = sendRequest(findTestObject(""Object Repository/REST API/Posts/POST Posts""))",,,,12-06-2024 14:16:14,12-06-2024 14:16:15,0.855s,PASSED
+"verifyResponseStatusCode(response, 201)",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.013s,PASSED
+"logInfo(""Response Body: "" + response.getResponseText())",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.028s,PASSED
+jsonResponse = JsonSlurper().parseText(response.getResponseText()),,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.021s,PASSED
+id = id,,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.003s,PASSED
+"logInfo(""Created Post ID: "" + id)",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.003s,PASSED
+,,,,,,,
+Test Cases/REST API/Posts/DELETE Posts,,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.811s,PASSED
+"getPostsResponse = sendRequest(findTestObject(""REST API/Posts/GET Posts""))",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.073s,PASSED
+"verifyResponseStatusCode(getPostsResponse, 200)",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.006s,PASSED
+jsonResponse = JsonSlurper().parseText(getPostsResponse.getResponseText()),,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.007s,PASSED
+postId = id,,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.012s,PASSED
+"logInfo(""Fetched Post ID: "" + postId)",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.004s,PASSED
+"deletePostRequest = findTestObject(""Object Repository/REST API/Posts/DELETE Posts"")",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.097s,PASSED
+deletePostRequest.setRestUrl(https://jsonplaceholder.typicode.com/posts/$postId),,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.042s,PASSED
+deleteResponse = sendRequest(deletePostRequest),,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.321s,PASSED
+"verifyResponseStatusCode(deleteResponse, 200)",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.009s,PASSED
+"logInfo(""Response Body: "" + deleteResponse.getResponseText())",,,,12-06-2024 14:16:15,12-06-2024 14:16:15,0.003s,PASSED
