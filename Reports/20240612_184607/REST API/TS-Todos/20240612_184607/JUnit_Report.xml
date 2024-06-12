@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS-Todos" time="10.933" tests="3" failures="0" errors="0">
+   <testsuite name="TS-Todos" tests="3" failures="0" errors="0" time="10.933" skipped="0" timestamp="12-06-2024T18:46:16" hostname="nasmahna - localhost" id="Test Suites/REST API/TS-Todos">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607"/>
+         <property name="logFiles" value="/Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nasmahna - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.5.0.217"/>
+      </properties>
+      <testcase name="Test Cases/REST API/Todos/TC GET Todos" time="5.8" classname="Test Cases/REST API/Todos/TC GET Todos" status="PASSED">
+         <system-out><![CDATA[12-06-2024T18:46:16 - [TEST_CASE][PASSED] - Test Cases/REST API/Todos/TC GET Todos: Test Cases/REST API/Todos/TC GET Todos
+
+12-06-2024T18:46:17 - [TEST_STEP][PASSED] - sendRequest(findTestObject("REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:19 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/0.har
+
+12-06-2024T18:46:19 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:19 - [TEST_STEP][PASSED] - data = findTestData("Data Files/REST API/Data Todos-API"): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - maxRows = Math.min(10, data.getRowNumbers()): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - for ([loopFile = 1, loopFile <= maxRows, (loopFile++)]): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:20 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/1.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/2.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/3.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/4.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/5.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/6.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:21 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/7.har
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:22 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/8.har
+
+12-06-2024T18:46:22 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:22 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:22 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/9.har
+
+12-06-2024T18:46:22 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:22 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - completed = data.getValue("completed", loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, completed: $completed): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:22 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/10.har
+
+12-06-2024T18:46:22 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T18:46:22 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - actualCompleted = completed.toString(): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - expectedCompleted = completed.replaceAll("\\n", "
+"): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, completed: $expectedCompleted): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, completed: $actualCompleted): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - assert actualCompleted == expectedCompleted: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/REST API/Todos/TC POST Todos" time="4.142" classname="Test Cases/REST API/Todos/TC POST Todos" status="PASSED">
+         <system-out><![CDATA[12-06-2024T18:46:22 - [TEST_CASE][PASSED] - Test Cases/REST API/Todos/TC POST Todos: Test Cases/REST API/Todos/TC POST Todos
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - testData = findTestData("Data Files/REST API/Data Todos-API"): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - maxRows = Math.min(10, testData.getRowNumbers()): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - for ([rowNum = 1, rowNum <= maxRows, (rowNum++)]): Created Todo ID: 201
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:22 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/11.har
+
+12-06-2024T18:46:23 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "delectus aut autem",
+  "completed": "false"
+}
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "delectus aut autem",
+  "completed": "false"
+}
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/12.har
+
+12-06-2024T18:46:23 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "quis ut nam facilis et officia qui",
+  "completed": "false"
+}
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "quis ut nam facilis et officia qui",
+  "completed": "false"
+}
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/13.har
+
+12-06-2024T18:46:23 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "fugiat veniam minus",
+  "completed": "false"
+}
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "fugiat veniam minus",
+  "completed": "false"
+}
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:23 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:23 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/14.har
+
+12-06-2024T18:46:24 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "et porro tempora",
+  "completed": "true"
+}
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "et porro tempora",
+  "completed": "true"
+}
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/15.har
+
+12-06-2024T18:46:24 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+  "completed": "false"
+}
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+  "completed": "false"
+}
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/16.har
+
+12-06-2024T18:46:24 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+  "completed": "false"
+}
+
+12-06-2024T18:46:24 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+  "completed": "false"
+}
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:24 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/17.har
+
+12-06-2024T18:46:25 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:25 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "illo expedita consequatur quia in",
+  "completed": "false"
+}
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "illo expedita consequatur quia in",
+  "completed": "false"
+}
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/18.har
+
+12-06-2024T18:46:25 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:25 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "quo adipisci enim quam ut ab",
+  "completed": "true"
+}
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "quo adipisci enim quam ut ab",
+  "completed": "true"
+}
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:25 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:25 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/19.har
+
+12-06-2024T18:46:26 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:26 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "molestiae perspiciatis ipsa",
+  "completed": "false"
+}
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "molestiae perspiciatis ipsa",
+  "completed": "false"
+}
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - Created Todo ID: 201
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - userId = testData.getValue("userId", rowNum): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - id = testData.getValue("id", rowNum): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - title = testData.getValue("title", rowNum): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - completed = testData.getValue("completed", rowNum): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Todos/POST Todos", ["userId":userId, "id":id, "title":title, "completed":completed])): Send request successfully
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/20.har
+
+12-06-2024T18:46:26 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T18:46:26 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "illo est ratione doloremque quia maiores aut",
+  "completed": "true"
+}
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - Response Body: {
+  "userId": "1",
+  "id": 201,
+  "title": "illo est ratione doloremque quia maiores aut",
+  "completed": "true"
+}
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - createdId = id: null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - logInfo("Created Todo ID: " + createdId): Created Todo ID: 201
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - Created Todo ID: 201]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/REST API/Todos/TC DELETE Todos" time="0.713" classname="Test Cases/REST API/Todos/TC DELETE Todos" status="PASSED">
+         <system-out><![CDATA[12-06-2024T18:46:26 - [TEST_CASE][PASSED] - Test Cases/REST API/Todos/TC DELETE Todos: Test Cases/REST API/Todos/TC DELETE Todos
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - getTodosResponse = sendRequest(findTestObject("REST API/Todos/GET Todos")): Send request successfully
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/21.har
+
+12-06-2024T18:46:26 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - verifyResponseStatusCode(getTodosResponse, 200): Verify response status code successfully
+
+12-06-2024T18:46:26 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - getTodosJsonResponse = JsonSlurper().parseText(getTodosResponse.getResponseText()): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - todoId = id: null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - logInfo("Fetched Todo ID: " + todoId): Fetched Todo ID: 1
+
+12-06-2024T18:46:26 - [MESSAGE][INFO] - Fetched Todo ID: 1
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - deleteTodoRequest = findTestObject("REST API/Todos/DELETE Todos"): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - deleteTodoRequest.setRestUrl("https://jsonplaceholder.typicode.com/todos/" + todoId): null
+
+12-06-2024T18:46:26 - [TEST_STEP][PASSED] - deleteResponse = sendRequest(deleteTodoRequest): Send request successfully
+
+12-06-2024T18:46:27 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_184607/REST API/TS-Todos/20240612_184607/requests/main/22.har
+
+12-06-2024T18:46:27 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T18:46:27 - [TEST_STEP][PASSED] - verifyResponseStatusCode(deleteResponse, 200): Verify response status code successfully
+
+12-06-2024T18:46:27 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T18:46:27 - [TEST_STEP][PASSED] - logInfo("Response Body: " + deleteResponse.getResponseText()): Response Body: {}
+
+12-06-2024T18:46:27 - [MESSAGE][INFO] - Response Body: {}]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[12-06-2024T18:46:16 - [TEST_SUITE][PASSED] - TS-Todos: Test Cases/REST API/Todos/TC DELETE Todos]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

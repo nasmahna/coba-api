@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS-Posts" time="8.001" tests="3" failures="0" errors="0">
+   <testsuite name="TS-Posts" tests="3" failures="0" errors="0" time="8.001" skipped="0" timestamp="12-06-2024T14:16:07" hostname="nasmahna - localhost" id="Test Suites/REST API/TS-Posts">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556"/>
+         <property name="logFiles" value="/Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nasmahna - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.5.0.217"/>
+      </properties>
+      <testcase name="Test Cases/REST API/Posts/GET Posts" time="5.775" classname="Test Cases/REST API/Posts/GET Posts" status="PASSED">
+         <system-out><![CDATA[12-06-2024T14:16:08 - [TEST_CASE][PASSED] - Test Cases/REST API/Posts/GET Posts: Test Cases/REST API/Posts/GET Posts
+
+12-06-2024T14:16:09 - [TEST_STEP][PASSED] - sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:11 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/0.har
+
+12-06-2024T14:16:11 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:11 - [TEST_STEP][PASSED] - data = findTestData("Data Files/REST API/Data Posts API"): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - maxRows = Math.min(10, data.getRowNumbers()): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - for ([loopFile = 1, loopFile <= maxRows, (loopFile++)]): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:12 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/1.har
+
+12-06-2024T14:16:12 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:12 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:12 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/2.har
+
+12-06-2024T14:16:12 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:12 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:12 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/3.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/4.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/5.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/6.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/7.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/8.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/9.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - userId = data.getValue("userId", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - id = data.getValue("id", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - title = data.getValue("title", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - body = data.getValue("body", loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Processing row: $loopFile): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(userId: $userId, id: $id, title: $title, body: $body): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:13 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/10.har
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - responseBody = response.getResponseBodyContent(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Response: $responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(responseBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+12-06-2024T14:16:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - if (jsonResponse.size() > 0): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualUserId = userId.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualId = id.toString(): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualTitle = title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - actualBody = body: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - expectedBody = body.replaceAll("\\n", "
+"): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Expected: userId: $userId, id: $id, title: $title, body: $expectedBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - println(Actual: userId: $actualUserId, id: $actualId, title: $actualTitle, body: $actualBody): null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualUserId == userId: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualId == id: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualTitle == title: null
+
+12-06-2024T14:16:13 - [TEST_STEP][PASSED] - assert actualBody == expectedBody: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/REST API/Posts/POST Posts" time="1.127" classname="Test Cases/REST API/Posts/POST Posts" status="PASSED">
+         <system-out><![CDATA[12-06-2024T14:16:13 - [TEST_CASE][PASSED] - Test Cases/REST API/Posts/POST Posts: Test Cases/REST API/Posts/POST Posts
+
+12-06-2024T14:16:14 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/REST API/Posts/POST Posts")): Send request successfully
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/11.har
+
+12-06-2024T14:16:15 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+12-06-2024T14:16:15 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - logInfo("Response Body: " + response.getResponseText()): Response Body: {
+  "id": 101
+}
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - Response Body: {
+  "id": 101
+}
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(response.getResponseText()): null
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - id = id: null
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - logInfo("Created Post ID: " + id): Created Post ID: 101
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - Created Post ID: 101]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/REST API/Posts/DELETE Posts" time="0.811" classname="Test Cases/REST API/Posts/DELETE Posts" status="PASSED">
+         <system-out><![CDATA[12-06-2024T14:16:15 - [TEST_CASE][PASSED] - Test Cases/REST API/Posts/DELETE Posts: Test Cases/REST API/Posts/DELETE Posts
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - getPostsResponse = sendRequest(findTestObject("REST API/Posts/GET Posts")): Send request successfully
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/12.har
+
+12-06-2024T14:16:15 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - verifyResponseStatusCode(getPostsResponse, 200): Verify response status code successfully
+
+12-06-2024T14:16:15 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - jsonResponse = JsonSlurper().parseText(getPostsResponse.getResponseText()): null
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - postId = id: null
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - logInfo("Fetched Post ID: " + postId): Fetched Post ID: 1
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - Fetched Post ID: 1
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - deletePostRequest = findTestObject("Object Repository/REST API/Posts/DELETE Posts"): null
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - deletePostRequest.setRestUrl(https://jsonplaceholder.typicode.com/posts/$postId): null
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - deleteResponse = sendRequest(deletePostRequest): Send request successfully
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - HAR: /Users/nasmahna/Documents/Katalon-GITS/katalon-API/Reports/20240612_141556/REST API/TS-Posts/20240612_141556/requests/main/13.har
+
+12-06-2024T14:16:15 - [MESSAGE][PASSED] - Send request successfully
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - verifyResponseStatusCode(deleteResponse, 200): Verify response status code successfully
+
+12-06-2024T14:16:15 - [MESSAGE][PASSED] - Verify response status code successfully
+
+12-06-2024T14:16:15 - [TEST_STEP][PASSED] - logInfo("Response Body: " + deleteResponse.getResponseText()): Response Body: {}
+
+12-06-2024T14:16:15 - [MESSAGE][INFO] - Response Body: {}]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[12-06-2024T14:16:07 - [TEST_SUITE][PASSED] - TS-Posts: Test Cases/REST API/Posts/DELETE Posts]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
